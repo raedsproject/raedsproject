@@ -1,0 +1,29 @@
+ALGORITHM checkpoint3
+VAR
+    sentence : CHAR ;
+    lengh : INTEGER ;  
+    word : INTEGER;
+    vowel : INTEGER ; 
+
+BEGIN
+    word:=0;
+    vowel:=0;
+    lengh:=0;
+
+    write('write a sentence').
+    read(sentence).
+    
+    lengh:= sentence.length ; 
+
+    FOR i FROM 0 TO lengh-1 step  DO 
+        IF(sentence[i]=' ') or (sentence[i]='.') DO 
+            word:=word+1 ; 
+        ELSE IF  (sentence[i]=["a","e","o","u","y","w","A","E","I","O","Y","U"])
+            vowel=vowel+1 ; 
+        END IF 
+    END FOR 
+    write('in your sentence there is ',word,' words' , vowel, 'vowels and contains ',lengh ,'letter');     
+
+
+
+END.
